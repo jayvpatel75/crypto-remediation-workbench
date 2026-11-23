@@ -1,0 +1,12 @@
+{
+  "dataset": "Authored synthetic regression benchmark; no external or expert validation",
+  "cases": 21,
+  "exact_matches": 21,
+  "true_positive_labels": 15,
+  "false_positive_labels": 0,
+  "false_negative_labels": 0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1": 1.0,
+  "errors": []
+}

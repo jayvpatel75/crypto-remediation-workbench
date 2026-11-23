@@ -1,0 +1,23 @@
+[
+  {"id":"legacy-tls","kind":"tls","observed":{"versions":["TLSv1.0","TLSv1.2"]},"expected":["TLS-001","TLS-002"]},
+  {"id":"modern-tls","kind":"tls","observed":{"versions":["TLSv1.3"]},"expected":[]},
+  {"id":"tls12-migration","kind":"tls","observed":{"versions":["TLSv1.2"]},"expected":["TLS-002"]},
+  {"id":"mixed-legacy","kind":"tls","observed":{"versions":["TLSv1.1","TLSv1.3"]},"expected":["TLS-001"]},
+  {"id":"aes128-valid","kind":"cipher","observed":{"algorithm":"AES","mode":"GCM","bits":128},"expected":[]},
+  {"id":"aes128-policy","kind":"cipher","observed":{"algorithm":"AES","mode":"GCM","bits":128},"context":{"requires_aes256":true},"expected":["ENC-002"]},
+  {"id":"ecb-mode","kind":"cipher","observed":{"algorithm":"AES","mode":"ECB","bits":256},"expected":["ENC-001"]},
+  {"id":"3des","kind":"cipher","observed":{"algorithm":"3DES","mode":"CBC","bits":168},"expected":["ENC-001"]},
+  {"id":"rsa-sha2-valid","kind":"ssh","observed":{"host_key_algorithm":"ssh-rsa","signature_algorithm":"rsa-sha2-256"},"expected":[]},
+  {"id":"rsa-sha1","kind":"ssh","observed":{"host_key_algorithm":"ssh-rsa","signature_algorithm":"ssh-rsa"},"expected":["SSH-001"]},
+  {"id":"dsa-key","kind":"ssh","observed":{"host_key_algorithm":"ssh-dss","signature_algorithm":"ssh-dss"},"expected":["SSH-001"]},
+  {"id":"ed25519-key","kind":"ssh","observed":{"host_key_algorithm":"ssh-ed25519","signature_algorithm":"ssh-ed25519"},"expected":[]},
+  {"id":"private-key","kind":"secret","observed":{"type":"private_key","location":"config.py:1"},"expected":["KEY-001"]},
+  {"id":"api-token","kind":"secret","observed":{"type":"api_token","location":"config.py:1"},"expected":["KEY-001"]},
+  {"id":"public-cert-not-secret","kind":"secret","observed":{"type":"public_certificate","location":"cert.pem:1"},"expected":[]},
+  {"id":"legacy-vpn","kind":"ipsec","observed":{"version":"IKEv1","encryption":"3DES","dh_group":2},"expected":["VPN-001"]},
+  {"id":"modern-vpn","kind":"ipsec","observed":{"version":"IKEv2","encryption":"AES-256-GCM","dh_group":19},"expected":[]},
+  {"id":"weak-dh","kind":"ipsec","observed":{"version":"IKEv2","encryption":"AES-256-GCM","dh_group":5},"expected":["VPN-001"]},
+  {"id":"rsa-pqc","kind":"public-key","observed":{"algorithm":"RSA","purpose":"key-establishment"},"expected":["PQC-001"]},
+  {"id":"ecdsa-pqc","kind":"public-key","observed":{"algorithm":"ECDSA","purpose":"signature"},"expected":["PQC-001"]},
+  {"id":"mlkem-no-classical-flag","kind":"public-key","observed":{"algorithm":"ML-KEM","purpose":"key-establishment"},"expected":[]}
+]

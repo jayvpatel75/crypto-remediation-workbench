@@ -1,0 +1,2056 @@
+{
+  "format": "workbench.scan.v1",
+  "synthetic": true,
+  "assets": [
+    {
+      "app": "payments-01",
+      "ref": "payments-01/tls/0",
+      "kind": "tls",
+      "observed": {
+        "versions": [
+          "TLSv1.0",
+          "TLSv1.2"
+        ]
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": false,
+        "load_balancer": "Legacy-LB",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "payments-01",
+      "ref": "payments-01/cipher/1",
+      "kind": "cipher",
+      "observed": {
+        "algorithm": "AES",
+        "bits": 128,
+        "mode": "ECB"
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": false,
+        "load_balancer": "Legacy-LB",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "payments-01",
+      "ref": "payments-01/ssh/2",
+      "kind": "ssh",
+      "observed": {
+        "host_key_algorithm": "ssh-rsa",
+        "signature_algorithm": "ssh-rsa"
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": false,
+        "load_balancer": "Legacy-LB",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "payments-01",
+      "ref": "payments-01/public-key/3",
+      "kind": "public-key",
+      "observed": {
+        "algorithm": "RSA",
+        "purpose": "key-establishment"
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": false,
+        "load_balancer": "Legacy-LB",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "payments-01",
+      "ref": "payments-01/secret/4",
+      "kind": "secret",
+      "observed": {
+        "type": "private_key",
+        "location": "src/config.py:12",
+        "value": "SYNTHETIC-NOT-A-REAL-KEY"
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": false,
+        "load_balancer": "Legacy-LB",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "claims-02",
+      "ref": "claims-02/tls/0",
+      "kind": "tls",
+      "observed": {
+        "versions": [
+          "TLSv1.2"
+        ]
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "claims-02",
+      "ref": "claims-02/cipher/1",
+      "kind": "cipher",
+      "observed": {
+        "algorithm": "AES",
+        "bits": 256,
+        "mode": "GCM"
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "claims-02",
+      "ref": "claims-02/ssh/2",
+      "kind": "ssh",
+      "observed": {
+        "host_key_algorithm": "ssh-rsa",
+        "signature_algorithm": "rsa-sha2-512"
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "claims-02",
+      "ref": "claims-02/public-key/3",
+      "kind": "public-key",
+      "observed": {
+        "algorithm": "ECDSA",
+        "purpose": "signature"
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "patient-portal-03",
+      "ref": "patient-portal-03/tls/0",
+      "kind": "tls",
+      "observed": {
+        "versions": [
+          "TLSv1.2",
+          "TLSv1.3"
+        ]
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "patient-portal-03",
+      "ref": "patient-portal-03/cipher/1",
+      "kind": "cipher",
+      "observed": {
+        "algorithm": "AES",
+        "bits": 128,
+        "mode": "GCM"
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "patient-portal-03",
+      "ref": "patient-portal-03/ssh/2",
+      "kind": "ssh",
+      "observed": {
+        "host_key_algorithm": "ssh-rsa",
+        "signature_algorithm": "rsa-sha2-512"
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "patient-portal-03",
+      "ref": "patient-portal-03/public-key/3",
+      "kind": "public-key",
+      "observed": {
+        "algorithm": "RSA",
+        "purpose": "key-establishment"
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "warehouse-iot-04",
+      "ref": "warehouse-iot-04/tls/0",
+      "kind": "tls",
+      "observed": {
+        "versions": [
+          "TLSv1.2",
+          "TLSv1.3"
+        ]
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": false,
+        "iot": true,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "warehouse-iot-04",
+      "ref": "warehouse-iot-04/cipher/1",
+      "kind": "cipher",
+      "observed": {
+        "algorithm": "AES",
+        "bits": 256,
+        "mode": "GCM"
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": false,
+        "iot": true,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "warehouse-iot-04",
+      "ref": "warehouse-iot-04/ssh/2",
+      "kind": "ssh",
+      "observed": {
+        "host_key_algorithm": "ssh-rsa",
+        "signature_algorithm": "rsa-sha2-512"
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": false,
+        "iot": true,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "warehouse-iot-04",
+      "ref": "warehouse-iot-04/public-key/3",
+      "kind": "public-key",
+      "observed": {
+        "algorithm": "ECDSA",
+        "purpose": "signature"
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": false,
+        "iot": true,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "vpn-edge-05",
+      "ref": "vpn-edge-05/tls/0",
+      "kind": "tls",
+      "observed": {
+        "versions": [
+          "TLSv1.0",
+          "TLSv1.2"
+        ]
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": false,
+        "load_balancer": "Legacy-LB",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "vpn-edge-05",
+      "ref": "vpn-edge-05/cipher/1",
+      "kind": "cipher",
+      "observed": {
+        "algorithm": "AES",
+        "bits": 128,
+        "mode": "GCM"
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": false,
+        "load_balancer": "Legacy-LB",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "vpn-edge-05",
+      "ref": "vpn-edge-05/ssh/2",
+      "kind": "ssh",
+      "observed": {
+        "host_key_algorithm": "ssh-rsa",
+        "signature_algorithm": "ssh-rsa"
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": false,
+        "load_balancer": "Legacy-LB",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "vpn-edge-05",
+      "ref": "vpn-edge-05/public-key/3",
+      "kind": "public-key",
+      "observed": {
+        "algorithm": "RSA",
+        "purpose": "key-establishment"
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": false,
+        "load_balancer": "Legacy-LB",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "vpn-edge-05",
+      "ref": "vpn-edge-05/ipsec/4",
+      "kind": "ipsec",
+      "observed": {
+        "version": "IKEv1",
+        "encryption": "3DES",
+        "dh_group": 2
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": false,
+        "load_balancer": "Legacy-LB",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "identity-06",
+      "ref": "identity-06/tls/0",
+      "kind": "tls",
+      "observed": {
+        "versions": [
+          "TLSv1.2"
+        ]
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "identity-06",
+      "ref": "identity-06/cipher/1",
+      "kind": "cipher",
+      "observed": {
+        "algorithm": "AES",
+        "bits": 256,
+        "mode": "ECB"
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "identity-06",
+      "ref": "identity-06/ssh/2",
+      "kind": "ssh",
+      "observed": {
+        "host_key_algorithm": "ssh-rsa",
+        "signature_algorithm": "rsa-sha2-512"
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "identity-06",
+      "ref": "identity-06/public-key/3",
+      "kind": "public-key",
+      "observed": {
+        "algorithm": "ECDSA",
+        "purpose": "signature"
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "payments-07",
+      "ref": "payments-07/tls/0",
+      "kind": "tls",
+      "observed": {
+        "versions": [
+          "TLSv1.2",
+          "TLSv1.3"
+        ]
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "payments-07",
+      "ref": "payments-07/cipher/1",
+      "kind": "cipher",
+      "observed": {
+        "algorithm": "AES",
+        "bits": 128,
+        "mode": "GCM"
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "payments-07",
+      "ref": "payments-07/ssh/2",
+      "kind": "ssh",
+      "observed": {
+        "host_key_algorithm": "ssh-rsa",
+        "signature_algorithm": "rsa-sha2-512"
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "payments-07",
+      "ref": "payments-07/public-key/3",
+      "kind": "public-key",
+      "observed": {
+        "algorithm": "RSA",
+        "purpose": "key-establishment"
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "payments-07",
+      "ref": "payments-07/secret/4",
+      "kind": "secret",
+      "observed": {
+        "type": "private_key",
+        "location": "src/config.py:12",
+        "value": "SYNTHETIC-NOT-A-REAL-KEY"
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "claims-08",
+      "ref": "claims-08/tls/0",
+      "kind": "tls",
+      "observed": {
+        "versions": [
+          "TLSv1.2",
+          "TLSv1.3"
+        ]
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "claims-08",
+      "ref": "claims-08/cipher/1",
+      "kind": "cipher",
+      "observed": {
+        "algorithm": "AES",
+        "bits": 256,
+        "mode": "GCM"
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "claims-08",
+      "ref": "claims-08/ssh/2",
+      "kind": "ssh",
+      "observed": {
+        "host_key_algorithm": "ssh-rsa",
+        "signature_algorithm": "rsa-sha2-512"
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "claims-08",
+      "ref": "claims-08/public-key/3",
+      "kind": "public-key",
+      "observed": {
+        "algorithm": "ECDSA",
+        "purpose": "signature"
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "patient-portal-09",
+      "ref": "patient-portal-09/tls/0",
+      "kind": "tls",
+      "observed": {
+        "versions": [
+          "TLSv1.0",
+          "TLSv1.2"
+        ]
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": false,
+        "load_balancer": "Legacy-LB",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "patient-portal-09",
+      "ref": "patient-portal-09/cipher/1",
+      "kind": "cipher",
+      "observed": {
+        "algorithm": "AES",
+        "bits": 128,
+        "mode": "GCM"
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": false,
+        "load_balancer": "Legacy-LB",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "patient-portal-09",
+      "ref": "patient-portal-09/ssh/2",
+      "kind": "ssh",
+      "observed": {
+        "host_key_algorithm": "ssh-rsa",
+        "signature_algorithm": "ssh-rsa"
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": false,
+        "load_balancer": "Legacy-LB",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "patient-portal-09",
+      "ref": "patient-portal-09/public-key/3",
+      "kind": "public-key",
+      "observed": {
+        "algorithm": "RSA",
+        "purpose": "key-establishment"
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": false,
+        "load_balancer": "Legacy-LB",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "warehouse-iot-10",
+      "ref": "warehouse-iot-10/tls/0",
+      "kind": "tls",
+      "observed": {
+        "versions": [
+          "TLSv1.2"
+        ]
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": false,
+        "iot": true,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "warehouse-iot-10",
+      "ref": "warehouse-iot-10/cipher/1",
+      "kind": "cipher",
+      "observed": {
+        "algorithm": "AES",
+        "bits": 256,
+        "mode": "GCM"
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": false,
+        "iot": true,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "warehouse-iot-10",
+      "ref": "warehouse-iot-10/ssh/2",
+      "kind": "ssh",
+      "observed": {
+        "host_key_algorithm": "ssh-rsa",
+        "signature_algorithm": "rsa-sha2-512"
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": false,
+        "iot": true,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "warehouse-iot-10",
+      "ref": "warehouse-iot-10/public-key/3",
+      "kind": "public-key",
+      "observed": {
+        "algorithm": "ECDSA",
+        "purpose": "signature"
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": false,
+        "iot": true,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "vpn-edge-11",
+      "ref": "vpn-edge-11/tls/0",
+      "kind": "tls",
+      "observed": {
+        "versions": [
+          "TLSv1.2",
+          "TLSv1.3"
+        ]
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "vpn-edge-11",
+      "ref": "vpn-edge-11/cipher/1",
+      "kind": "cipher",
+      "observed": {
+        "algorithm": "AES",
+        "bits": 128,
+        "mode": "ECB"
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "vpn-edge-11",
+      "ref": "vpn-edge-11/ssh/2",
+      "kind": "ssh",
+      "observed": {
+        "host_key_algorithm": "ssh-rsa",
+        "signature_algorithm": "rsa-sha2-512"
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "vpn-edge-11",
+      "ref": "vpn-edge-11/public-key/3",
+      "kind": "public-key",
+      "observed": {
+        "algorithm": "RSA",
+        "purpose": "key-establishment"
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "vpn-edge-11",
+      "ref": "vpn-edge-11/ipsec/4",
+      "kind": "ipsec",
+      "observed": {
+        "version": "IKEv1",
+        "encryption": "3DES",
+        "dh_group": 2
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "identity-12",
+      "ref": "identity-12/tls/0",
+      "kind": "tls",
+      "observed": {
+        "versions": [
+          "TLSv1.2",
+          "TLSv1.3"
+        ]
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "identity-12",
+      "ref": "identity-12/cipher/1",
+      "kind": "cipher",
+      "observed": {
+        "algorithm": "AES",
+        "bits": 256,
+        "mode": "GCM"
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "identity-12",
+      "ref": "identity-12/ssh/2",
+      "kind": "ssh",
+      "observed": {
+        "host_key_algorithm": "ssh-rsa",
+        "signature_algorithm": "rsa-sha2-512"
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "identity-12",
+      "ref": "identity-12/public-key/3",
+      "kind": "public-key",
+      "observed": {
+        "algorithm": "ECDSA",
+        "purpose": "signature"
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "payments-13",
+      "ref": "payments-13/tls/0",
+      "kind": "tls",
+      "observed": {
+        "versions": [
+          "TLSv1.0",
+          "TLSv1.2"
+        ]
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": false,
+        "load_balancer": "Legacy-LB",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "payments-13",
+      "ref": "payments-13/cipher/1",
+      "kind": "cipher",
+      "observed": {
+        "algorithm": "AES",
+        "bits": 128,
+        "mode": "GCM"
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": false,
+        "load_balancer": "Legacy-LB",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "payments-13",
+      "ref": "payments-13/ssh/2",
+      "kind": "ssh",
+      "observed": {
+        "host_key_algorithm": "ssh-rsa",
+        "signature_algorithm": "ssh-rsa"
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": false,
+        "load_balancer": "Legacy-LB",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "payments-13",
+      "ref": "payments-13/public-key/3",
+      "kind": "public-key",
+      "observed": {
+        "algorithm": "RSA",
+        "purpose": "key-establishment"
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": false,
+        "load_balancer": "Legacy-LB",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "payments-13",
+      "ref": "payments-13/secret/4",
+      "kind": "secret",
+      "observed": {
+        "type": "private_key",
+        "location": "src/config.py:12",
+        "value": "SYNTHETIC-NOT-A-REAL-KEY"
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": false,
+        "load_balancer": "Legacy-LB",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "claims-14",
+      "ref": "claims-14/tls/0",
+      "kind": "tls",
+      "observed": {
+        "versions": [
+          "TLSv1.2"
+        ]
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "claims-14",
+      "ref": "claims-14/cipher/1",
+      "kind": "cipher",
+      "observed": {
+        "algorithm": "AES",
+        "bits": 256,
+        "mode": "GCM"
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "claims-14",
+      "ref": "claims-14/ssh/2",
+      "kind": "ssh",
+      "observed": {
+        "host_key_algorithm": "ssh-rsa",
+        "signature_algorithm": "rsa-sha2-512"
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "claims-14",
+      "ref": "claims-14/public-key/3",
+      "kind": "public-key",
+      "observed": {
+        "algorithm": "ECDSA",
+        "purpose": "signature"
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "patient-portal-15",
+      "ref": "patient-portal-15/tls/0",
+      "kind": "tls",
+      "observed": {
+        "versions": [
+          "TLSv1.2",
+          "TLSv1.3"
+        ]
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "patient-portal-15",
+      "ref": "patient-portal-15/cipher/1",
+      "kind": "cipher",
+      "observed": {
+        "algorithm": "AES",
+        "bits": 128,
+        "mode": "GCM"
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "patient-portal-15",
+      "ref": "patient-portal-15/ssh/2",
+      "kind": "ssh",
+      "observed": {
+        "host_key_algorithm": "ssh-rsa",
+        "signature_algorithm": "rsa-sha2-512"
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "patient-portal-15",
+      "ref": "patient-portal-15/public-key/3",
+      "kind": "public-key",
+      "observed": {
+        "algorithm": "RSA",
+        "purpose": "key-establishment"
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "warehouse-iot-16",
+      "ref": "warehouse-iot-16/tls/0",
+      "kind": "tls",
+      "observed": {
+        "versions": [
+          "TLSv1.2",
+          "TLSv1.3"
+        ]
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": false,
+        "iot": true,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "warehouse-iot-16",
+      "ref": "warehouse-iot-16/cipher/1",
+      "kind": "cipher",
+      "observed": {
+        "algorithm": "AES",
+        "bits": 256,
+        "mode": "ECB"
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": false,
+        "iot": true,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "warehouse-iot-16",
+      "ref": "warehouse-iot-16/ssh/2",
+      "kind": "ssh",
+      "observed": {
+        "host_key_algorithm": "ssh-rsa",
+        "signature_algorithm": "rsa-sha2-512"
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": false,
+        "iot": true,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "warehouse-iot-16",
+      "ref": "warehouse-iot-16/public-key/3",
+      "kind": "public-key",
+      "observed": {
+        "algorithm": "ECDSA",
+        "purpose": "signature"
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": false,
+        "iot": true,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "vpn-edge-17",
+      "ref": "vpn-edge-17/tls/0",
+      "kind": "tls",
+      "observed": {
+        "versions": [
+          "TLSv1.0",
+          "TLSv1.2"
+        ]
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": false,
+        "load_balancer": "Legacy-LB",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "vpn-edge-17",
+      "ref": "vpn-edge-17/cipher/1",
+      "kind": "cipher",
+      "observed": {
+        "algorithm": "AES",
+        "bits": 128,
+        "mode": "GCM"
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": false,
+        "load_balancer": "Legacy-LB",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "vpn-edge-17",
+      "ref": "vpn-edge-17/ssh/2",
+      "kind": "ssh",
+      "observed": {
+        "host_key_algorithm": "ssh-rsa",
+        "signature_algorithm": "ssh-rsa"
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": false,
+        "load_balancer": "Legacy-LB",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "vpn-edge-17",
+      "ref": "vpn-edge-17/public-key/3",
+      "kind": "public-key",
+      "observed": {
+        "algorithm": "RSA",
+        "purpose": "key-establishment"
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": false,
+        "load_balancer": "Legacy-LB",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "vpn-edge-17",
+      "ref": "vpn-edge-17/ipsec/4",
+      "kind": "ipsec",
+      "observed": {
+        "version": "IKEv1",
+        "encryption": "3DES",
+        "dh_group": 2
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": false,
+        "load_balancer": "Legacy-LB",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "identity-18",
+      "ref": "identity-18/tls/0",
+      "kind": "tls",
+      "observed": {
+        "versions": [
+          "TLSv1.2"
+        ]
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "identity-18",
+      "ref": "identity-18/cipher/1",
+      "kind": "cipher",
+      "observed": {
+        "algorithm": "AES",
+        "bits": 256,
+        "mode": "GCM"
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "identity-18",
+      "ref": "identity-18/ssh/2",
+      "kind": "ssh",
+      "observed": {
+        "host_key_algorithm": "ssh-rsa",
+        "signature_algorithm": "rsa-sha2-512"
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "identity-18",
+      "ref": "identity-18/public-key/3",
+      "kind": "public-key",
+      "observed": {
+        "algorithm": "ECDSA",
+        "purpose": "signature"
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "payments-19",
+      "ref": "payments-19/tls/0",
+      "kind": "tls",
+      "observed": {
+        "versions": [
+          "TLSv1.2",
+          "TLSv1.3"
+        ]
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "payments-19",
+      "ref": "payments-19/cipher/1",
+      "kind": "cipher",
+      "observed": {
+        "algorithm": "AES",
+        "bits": 128,
+        "mode": "GCM"
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "payments-19",
+      "ref": "payments-19/ssh/2",
+      "kind": "ssh",
+      "observed": {
+        "host_key_algorithm": "ssh-rsa",
+        "signature_algorithm": "rsa-sha2-512"
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "payments-19",
+      "ref": "payments-19/public-key/3",
+      "kind": "public-key",
+      "observed": {
+        "algorithm": "RSA",
+        "purpose": "key-establishment"
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "payments-19",
+      "ref": "payments-19/secret/4",
+      "kind": "secret",
+      "observed": {
+        "type": "private_key",
+        "location": "src/config.py:12",
+        "value": "SYNTHETIC-NOT-A-REAL-KEY"
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "claims-20",
+      "ref": "claims-20/tls/0",
+      "kind": "tls",
+      "observed": {
+        "versions": [
+          "TLSv1.2",
+          "TLSv1.3"
+        ]
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "claims-20",
+      "ref": "claims-20/cipher/1",
+      "kind": "cipher",
+      "observed": {
+        "algorithm": "AES",
+        "bits": 256,
+        "mode": "GCM"
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "claims-20",
+      "ref": "claims-20/ssh/2",
+      "kind": "ssh",
+      "observed": {
+        "host_key_algorithm": "ssh-rsa",
+        "signature_algorithm": "rsa-sha2-512"
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "claims-20",
+      "ref": "claims-20/public-key/3",
+      "kind": "public-key",
+      "observed": {
+        "algorithm": "ECDSA",
+        "purpose": "signature"
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "patient-portal-21",
+      "ref": "patient-portal-21/tls/0",
+      "kind": "tls",
+      "observed": {
+        "versions": [
+          "TLSv1.0",
+          "TLSv1.2"
+        ]
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": false,
+        "load_balancer": "Legacy-LB",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "patient-portal-21",
+      "ref": "patient-portal-21/cipher/1",
+      "kind": "cipher",
+      "observed": {
+        "algorithm": "AES",
+        "bits": 128,
+        "mode": "ECB"
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": false,
+        "load_balancer": "Legacy-LB",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "patient-portal-21",
+      "ref": "patient-portal-21/ssh/2",
+      "kind": "ssh",
+      "observed": {
+        "host_key_algorithm": "ssh-rsa",
+        "signature_algorithm": "ssh-rsa"
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": false,
+        "load_balancer": "Legacy-LB",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "patient-portal-21",
+      "ref": "patient-portal-21/public-key/3",
+      "kind": "public-key",
+      "observed": {
+        "algorithm": "RSA",
+        "purpose": "key-establishment"
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": false,
+        "load_balancer": "Legacy-LB",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "warehouse-iot-22",
+      "ref": "warehouse-iot-22/tls/0",
+      "kind": "tls",
+      "observed": {
+        "versions": [
+          "TLSv1.2"
+        ]
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": false,
+        "iot": true,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "warehouse-iot-22",
+      "ref": "warehouse-iot-22/cipher/1",
+      "kind": "cipher",
+      "observed": {
+        "algorithm": "AES",
+        "bits": 256,
+        "mode": "GCM"
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": false,
+        "iot": true,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "warehouse-iot-22",
+      "ref": "warehouse-iot-22/ssh/2",
+      "kind": "ssh",
+      "observed": {
+        "host_key_algorithm": "ssh-rsa",
+        "signature_algorithm": "rsa-sha2-512"
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": false,
+        "iot": true,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "warehouse-iot-22",
+      "ref": "warehouse-iot-22/public-key/3",
+      "kind": "public-key",
+      "observed": {
+        "algorithm": "ECDSA",
+        "purpose": "signature"
+      },
+      "context": {
+        "owner": "Platform",
+        "criticality": "high",
+        "internet_exposed": false,
+        "iot": true,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 15,
+        "requires_aes256": true
+      }
+    },
+    {
+      "app": "vpn-edge-23",
+      "ref": "vpn-edge-23/tls/0",
+      "kind": "tls",
+      "observed": {
+        "versions": [
+          "TLSv1.2",
+          "TLSv1.3"
+        ]
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "vpn-edge-23",
+      "ref": "vpn-edge-23/cipher/1",
+      "kind": "cipher",
+      "observed": {
+        "algorithm": "AES",
+        "bits": 128,
+        "mode": "GCM"
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "vpn-edge-23",
+      "ref": "vpn-edge-23/ssh/2",
+      "kind": "ssh",
+      "observed": {
+        "host_key_algorithm": "ssh-rsa",
+        "signature_algorithm": "rsa-sha2-512"
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "vpn-edge-23",
+      "ref": "vpn-edge-23/public-key/3",
+      "kind": "public-key",
+      "observed": {
+        "algorithm": "RSA",
+        "purpose": "key-establishment"
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "vpn-edge-23",
+      "ref": "vpn-edge-23/ipsec/4",
+      "kind": "ipsec",
+      "observed": {
+        "version": "IKEv1",
+        "encryption": "3DES",
+        "dh_group": 2
+      },
+      "context": {
+        "owner": "Payments",
+        "criticality": "medium",
+        "internet_exposed": true,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "identity-24",
+      "ref": "identity-24/tls/0",
+      "kind": "tls",
+      "observed": {
+        "versions": [
+          "TLSv1.2",
+          "TLSv1.3"
+        ]
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "identity-24",
+      "ref": "identity-24/cipher/1",
+      "kind": "cipher",
+      "observed": {
+        "algorithm": "AES",
+        "bits": 256,
+        "mode": "GCM"
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "identity-24",
+      "ref": "identity-24/ssh/2",
+      "kind": "ssh",
+      "observed": {
+        "host_key_algorithm": "ssh-rsa",
+        "signature_algorithm": "rsa-sha2-512"
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    },
+    {
+      "app": "identity-24",
+      "ref": "identity-24/public-key/3",
+      "kind": "public-key",
+      "observed": {
+        "algorithm": "ECDSA",
+        "purpose": "signature"
+      },
+      "context": {
+        "owner": "Operations",
+        "criticality": "medium",
+        "internet_exposed": false,
+        "iot": false,
+        "supports_tls13": true,
+        "load_balancer": "Software proxy",
+        "retention_years": 2,
+        "requires_aes256": false
+      }
+    }
+  ]
+}
